@@ -1,0 +1,7 @@
+node_modules
+coverage
+.nyc_output
+__pycache__
+.pytest__cache
+venv
+archive

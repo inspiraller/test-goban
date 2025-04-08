@@ -240,6 +240,7 @@ describe('unchain', () => {
       'o#####o',
       '.ooooo.'
     ]);
+
     expect(goban.getChainedBoard()).toEqual(
       expect.arrayContaining([
         '.ooooo.', 
@@ -316,6 +317,22 @@ describe('unchain', () => {
       ]),
     );
   });
+  it('test19: custom: left edge', () => {
+    const goban = new Goban([
+      'o##', 
+      'o#.', 
+      'o##',
+      'o##', 
+      'o##',
+    ]);
+    expect(goban.getChainedBoard()).toEqual(
+      expect.arrayContaining([
+        '8##', 
+        '8#.', 
+        '8##',
+        '8##', 
+        '8##',
+      ]),
+    );
+  });
 })
-
-// 4,789,18
